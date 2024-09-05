@@ -5,15 +5,17 @@ import * as Yup from "yup";
 
 import FormInput from "../../components/formComponents/FormInput";
 import { IJobDetails } from "../../interface/forms";
-import { useData } from "./DataProvider";
+import { useData } from "./DataProvider"; // Import the custom hook
 
+// Define prop types for the component
 interface JobDetailsFormProps {
-  handleTabChange: (index: number) => void;
+  handleTabChange: (index: number) => void; // Correct typing for handleTabChange
 }
 
 const JobDetailsForm: React.FC<JobDetailsFormProps> = ({ handleTabChange }) => {
-  const context = useData();
+  const context = useData(); // Access the context
 
+  // Ensure context is available
   if (!context) return null;
 
   const { state, setState } = context;
