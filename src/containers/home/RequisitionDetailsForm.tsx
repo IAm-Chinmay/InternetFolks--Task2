@@ -51,7 +51,7 @@ const RequisitionDetailsForm: React.FC<{
           label="Requisition Title"
           placeholder="Enter requisition title"
           name="requisitionTitle"
-          onChange={formik.handleChange}
+          onChange={(e) => handleFieldChange(e.target.name, e.target.value)}
           onBlur={formik.handleBlur}
           value={formik.values.requisitionTitle}
           error={formik.errors.requisitionTitle}

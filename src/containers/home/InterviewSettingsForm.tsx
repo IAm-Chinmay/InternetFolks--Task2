@@ -34,8 +34,7 @@ const InterviewSettingsForm: React.FC<{
     }),
     onSubmit: (values) => {
       setState((prev) => ({ ...prev, interviewSettings: values }));
-      handleTabChange(2);
-      alert("Yooooo Submitted :))) (It worked)");
+      alert("YOO IT WORKED ! SUBMITTED");
     },
     enableReinitialize: true,
   });
@@ -60,9 +59,9 @@ const InterviewSettingsForm: React.FC<{
             handleFieldChange(field, value)
           }
           onBlur={(field: string) => formik.setFieldTouched(field, true)}
-          value={formik.values?.interviewMode}
-          error={formik.errors?.interviewMode}
-          touched={formik.touched?.interviewMode}
+          value={formik.values.interviewMode}
+          error={formik.errors.interviewMode}
+          touched={formik.touched.interviewMode}
         />
         <FormSelect
           label="Interview Duration"
@@ -73,9 +72,9 @@ const InterviewSettingsForm: React.FC<{
             handleFieldChange(field, value)
           }
           onBlur={(field: string) => formik.setFieldTouched(field, true)}
-          value={formik.values?.interviewDuration}
-          error={formik.errors?.interviewDuration}
-          touched={formik.touched?.interviewDuration}
+          value={formik.values.interviewDuration}
+          error={formik.errors.interviewDuration}
+          touched={formik.touched.interviewDuration}
         />
         <FormSelect
           label="Interview Language"
@@ -86,9 +85,9 @@ const InterviewSettingsForm: React.FC<{
             handleFieldChange(field, value)
           }
           onBlur={(field: string) => formik.setFieldTouched(field, true)}
+          value={formik.values.interviewLanguage}
           error={formik.errors.interviewLanguage}
           touched={formik.touched.interviewLanguage}
-          value={formik.values.interviewLanguage}
         />
         <Flex w="100%" justify="flex-end" mt="4rem" gap="20px">
           <Button
